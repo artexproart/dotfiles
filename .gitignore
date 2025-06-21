@@ -1,22 +1,49 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# Игнорировать служебные файлы и директории
+.DS_Store
+*.swp
+*~
+*.bak
+*.tmp
+*.log
+*.cache
+
+# Игнорировать резервные копии (например, от rcp или rsync)
+*.bak
+*.old
+
+# Игнорировать бинарные и скомпилированные файлы
+*.o
+*.pyc
+*.class
+*.bin
+*.so
+*.a
+
+# Игнорировать временные файлы редакторов и IDE
+.idea/
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+*.sw?
+.nvim/
+
+# Игнорировать личные или конфиденциальные файлы
+*.secret
+*.token
+.env
+*.priv
+
+# Игнорировать файлы, специфичные для Stow (если нужно)
+.stow-local-ignore
+
+# Игнорировать общие системные файлы
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Игнорировать файлы пакетных менеджеров (если они есть)
+package-lock.json
+yarn.lock
+Gemfile.lock
+
+# Игнорировать сгенерированные файлы (например, автодополнение)
+*.zwc
+zcompdump*
