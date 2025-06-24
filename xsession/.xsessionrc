@@ -1,0 +1,31 @@
+#!/bin/bash
+# Настройка мыши Logitech G403
+xinput set-prop "Logitech G403 HERO Gaming Mouse" "libinput Accel Speed" -1
+
+# Настройка раскладки клавиатуры
+#setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
+
+# Сетевой апплет
+nm-applet > /dev/null 2>&1 &
+
+# Bluetooth-апплет
+#blueman-applet > /dev/null 2>&1 &
+
+# Индикатор громкости
+volumeicon > /dev/null 2>&1 &
+
+# Менеджер буфера обмена
+copyq > /dev/null 2>&1 &
+
+# Демон раскладки и индикатор
+kbdd > /dev/null 2>&1 &
+#kbdd-indicator > /dev/null 2>&1 &
+
+# Строка статуса (дата и время)
+while true; do
+    xsetroot -name "$(date '+%a %d %b %H:%M')"
+    sleep 30
+done &
+
+# Запуск DWM
+exec /usr/local/bin/dwm
