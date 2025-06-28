@@ -1,0 +1,4 @@
+# Запуск xsettingsd при старте сессии
+if command -v xsettingsd >/dev/null; then
+  pgrep -x xsettingsd >/dev/null || xsettingsd &
+fi
