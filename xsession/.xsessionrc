@@ -18,7 +18,7 @@ volumeicon > /dev/null 2>&1 &
 copyq > /dev/null 2>&1 &
 
 # Демон раскладки и индикатор
-kbdd > /dev/null 2>&1 &
+# kbdd > /dev/null 2>&1 &
 #kbdd-indicator > /dev/null 2>&1 &
 
 # Строка статуса (дата и время)

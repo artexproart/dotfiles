@@ -2,3 +2,6 @@
 if command -v xsettingsd >/dev/null; then
   pgrep -x xsettingsd >/dev/null || xsettingsd &
 fi
+
+# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+

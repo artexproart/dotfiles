@@ -117,3 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 . "$HOME/.local/bin/env"
+
+# Тёмная тема для GTK и Qt
+export GTK_THEME="Yaru-dark"
+export QT_QPA_PLATFORMTHEME="qt5ct"
