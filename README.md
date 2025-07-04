@@ -262,3 +262,15 @@ amixer set Master toggle
 **Автор:** artexproart  
 **Репозиторий:** https://github.com/artexproart/dotfiles  
 **Система:** U:Жbuntu 24.04 LTS + DWM 6.5
+
+### YouGile
+
+- Приложение YouGile установлено как AppImage и запускается с параметром --no-sandbox.
+- Для удобного запуска через Rofi создан ярлык с .desktop файлом.
+- Файл .desktop находится в пакете apps и управляется через GNU Stow.
+
+Использование:
+1. Нажмите Mod + r для вызова Rofi.
+2. Начните вводить "YouGile".
+3. Выберите приложение для запуска.
+

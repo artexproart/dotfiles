@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YouGile
+Exec=/home/art/Downloads/YouGile-40.16.7-x86_64.AppImage --no-sandbox
+Icon=application-default-icon
+Terminal=false
+Categories=Utility;
+Comment=YouGile AppImage
+StartupNotify=true
