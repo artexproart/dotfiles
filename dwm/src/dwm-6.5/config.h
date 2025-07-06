@@ -27,7 +27,17 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1: Search", "2: Work", "3: Plan", "4: Note", "5: Ai", "6: Study", "7: Training", "8: Chat", "9: Music" };
+static const char *tags[] = {
+    "1: Search",
+    "2: Work",
+    "3: Obsidian",
+    "4: AI",
+    "5: Study",
+    "6: Exercises",
+    "7: Training",
+    "8: Chats",
+    "9: Music"
+};
 
 static const Rule rules[] = {
     /* class            instance    title       tags mask     isfloating   monitor */
@@ -35,7 +45,7 @@ static const Rule rules[] = {
 	//  { "Rofi",           NULL,       NULL,       1 << 0,       1,           -1 },
    // { "Alacritty",      NULL,       NULL,       1 << 0,       0,           -1 },
    // { "telegram-desktop", NULL,     NULL,       1 << 7,       0,           -1 },
-  //  { "yandex-music",   NULL,       NULL,       1 << 8,       0,           -1 },
+    { "yandex-music",   NULL,       NULL,       1 << 8,       0,           -1 },
     // ... другие правила ...
 };
 
@@ -76,6 +86,18 @@ static const char *obsidiancmd[]  = { "obsidian", NULL };
 static const char *yandexcmd[]    = { "yandex-music", NULL };
 static const char *screenshotcmd[] = { "scrot", "-s", "-e", "xclip -selection clipboard -t image/png -i $f", "/tmp/screenshot_%Y%m%d_%H%M%S.png", NULL };
 static const char *fullscreenshotcmd[] = { "scrot", "-e", "xclip -selection clipboard -t image/png -i $f", "/tmp/screenshot_%Y%m%d_%H%M%S.png", NULL };
+
+void
+shiftview(const Arg *arg) {
+    Arg shifted;
+    if(arg->i > 0) // right shift
+        shifted.ui = (selmon->tagset[selmon->seltags] << arg->i)
+           | (selmon->tagset[selmon->seltags] >> (LENGTH(tags) - arg->i));
+    else // left shift  
+        shifted.ui = selmon->tagset[selmon->seltags] >> (- arg->i)
+           | selmon->tagset[selmon->seltags] << (LENGTH(tags) + arg->i);
+    view(&shifted);
+}
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -121,6 +143,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ 0,                    				XK_Print,  spawn,          {.v = fullscreenshotcmd } },
+	// Циклическое переключение между тегами стрелками
+{ MODKEY,                       XK_Left,   shiftview,      {.i = -1 } },
+{ MODKEY,                       XK_Right,  shiftview,      {.i = +1 } },
+
 };
 
 /* button definitions */
