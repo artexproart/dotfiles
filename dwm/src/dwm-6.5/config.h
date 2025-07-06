@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1: Search", "2: Work", "3: Plan", "4: Note", "5: Ai", "6: Study", "7: Training", "8: Chat", "9: Music" };
 
 static const Rule rules[] = {
     /* class            instance    title       tags mask     isfloating   monitor */
@@ -35,7 +35,7 @@ static const Rule rules[] = {
 	//  { "Rofi",           NULL,       NULL,       1 << 0,       1,           -1 },
    // { "Alacritty",      NULL,       NULL,       1 << 0,       0,           -1 },
    // { "telegram-desktop", NULL,     NULL,       1 << 7,       0,           -1 },
-    { "yandex-music",   NULL,       NULL,       1 << 8,       0,           -1 },
+  //  { "yandex-music",   NULL,       NULL,       1 << 8,       0,           -1 },
     // ... другие правила ...
 };
 
