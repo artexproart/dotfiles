@@ -121,3 +121,8 @@ fi
 # Тёмная тема для GTK и Qt
 export GTK_THEME="Yaru-dark"
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# Cursor AI alias
+function cursor() {
+    /opt/cursor.AppImage --no-sandbox "${@}" > /dev/null 2>&1 & disown
+}
