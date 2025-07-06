@@ -21,16 +21,16 @@
 - **Редактор**: Neovim с AstroNvim
 - **Шрифт**: FiraCode Nerd Font
 
-### Семантические теги (рабочие пространства)
-- **1: Search** - Google Chrome autostart
-- **2: Work** - Рабочие задачи и терминалы
-- **3: Planing** планирование
-- **4: Notes** 
-- **5: AI**  
-- **6: Study**  
-- **7: Training** - Тренинги и семинары
-- **8: Chats** - Мессенджеры и коммуникации
-- **9: Music** - Яндекс.Музыка и аудио
+### Текущая раскладка тегов
+1. **Search** - Google Chrome (автозапуск)
+2. **Work** - Рабочие задачи
+3. **Planing** - Планирование (ранее Obsidian)
+4. **Notes** - Заметки (ранее AI)
+5. **Study** - Обучение
+6. **Exercises** - Упражнения
+7. **Training** - Тренинги
+8. **Chats** - Мессенджеры
+9. **Music** - Яндекс.Музыка
 
 ### Системный трей
 - **nm-applet** - управление сетью
@@ -262,6 +262,10 @@ amixer set Master toggle
 **Автор:** artexproart  
 **Репозиторий:** https://github.com/artexproart/dotfiles  
 **Система:** U:Жbuntu 24.04 LTS + DWM 6.5
+
+### Cursor AI 
+- **Cursor AI 0.50.4**: ИИ-редактор кода с интеграцией в терминал
+- **Функция cursor()**: Быстрый запуск через алиас в .bashrc
 
 ### YouGile
 
