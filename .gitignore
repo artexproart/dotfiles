@@ -52,5 +52,15 @@ Gemfile.lock
 *.zwc
 zcompdump*
 
+# GNOME config exclusions
+config/gnome/config/google-chrome*/
+config/gnome/config/chromium*/
+config/gnome/config/mozilla*/
+config/gnome/config/Telegram*/
+config/gnome/config/discord*/
+config/gnome/config/pulse/
+config/gnome/config/*/cache/
+config/gnome/config/*/logs/
+
 # Не добавляйте сюда файлы конфигураций, которые хотите отслеживать в dotfiles!
 
