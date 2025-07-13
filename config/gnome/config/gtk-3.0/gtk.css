@@ -1,0 +1,76 @@
+/* Уменьшение верхней панели GNOME Terminal 3.52.0 */
+
+/* Минимизация headerbar для современных версий */
+window.background > headerbar {
+    min-height: 0px;
+    padding: 2px 4px;
+    margin: 0;
+    border: none;
+}
+
+/* Альтернативный селектор для headerbar */
+headerbar.titlebar {
+    min-height: 0px;
+    padding: 2px 4px;
+    margin: 0;
+}
+
+/* Уменьшение высоты вкладок */
+notebook {
+    padding: 0;
+}
+
+notebook tab {
+    min-height: 0px;
+    padding: 3px 8px;
+    margin: 0 1px;
+    border-radius: 3px 3px 0 0;
+}
+
+/* Компактные кнопки управления */
+headerbar button {
+    min-height: 18px;
+    min-width: 18px;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+}
+
+/* Уменьшение текста в заголовках вкладок */
+notebook tab label {
+    font-size: 0.85em;
+    padding: 0;
+    margin: 0;
+}
+
+/* Компактное меню */
+headerbar .menu-button {
+    min-height: 20px;
+    min-width: 20px;
+    padding: 2px;
+}
+
+/* Убираем лишние отступы */
+.titlebar {
+    padding: 0;
+    margin: 0;
+}
+
+/* Компактные кнопки создания вкладок */
+headerbar .image-button {
+    min-height: 20px;
+    min-width: 20px;
+    padding: 2px;
+}
+
+/* Дополнительные селекторы для Ubuntu 24.04 */
+window.background notebook > header {
+    min-height: 0px;
+    padding: 2px;
+}
+
+window.background notebook > header > tabs > tab {
+    min-height: 0px;
+    padding: 3px 8px;
+}
+
