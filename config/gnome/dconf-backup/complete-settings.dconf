@@ -58,7 +58,7 @@ primary-color='#000000000000'
 secondary-color='#000000000000'
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'ru'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('xkb', 'ru')]
 per-window=false
 show-all-sources=false
 sources=[('xkb', 'us'), ('xkb', 'ru')]
@@ -405,6 +405,7 @@ locations=@av []
 
 [org/gnome/software]
 check-timestamp=int64 1752379627
+flatpak-purge-timestamp=int64 1752404771
 
 [org/gnome/terminal/legacy]
 always-check-default-terminal=false
