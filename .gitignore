@@ -64,3 +64,23 @@ config/gnome/config/*/logs/
 
 # Не добавляйте сюда файлы конфигураций, которые хотите отслеживать в dotfiles!
 
+# Obsidian системные файлы
+obsidian/.config/obsidian/Cache/
+obsidian/.config/obsidian/Code\ Cache/
+obsidian/.config/obsidian/Cookies*
+obsidian/.config/obsidian/Crashpad/
+obsidian/.config/obsidian/Dawn*Cache/
+obsidian/.config/obsidian/Dictionaries/
+obsidian/.config/obsidian/GPUCache/
+obsidian/.config/obsidian/IndexedDB/
+obsidian/.config/obsidian/Local\ Storage/
+obsidian/.config/obsidian/Network\ Persistent\ State
+obsidian/.config/obsidian/Preferences
+obsidian/.config/obsidian/Session\ Storage/
+obsidian/.config/obsidian/Shared\ Dictionary/
+obsidian/.config/obsidian/SharedStorage*
+obsidian/.config/obsidian/Singleton*
+obsidian/.config/obsidian/TransportSecurity
+obsidian/.config/obsidian/Trust\ Tokens*
+obsidian/.config/obsidian/WebStorage/
+obsidian/.config/obsidian/id

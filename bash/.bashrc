@@ -126,3 +126,29 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 function cursor() {
     /opt/cursor.AppImage --no-sandbox "${@}" > /dev/null 2>&1 & disown
 }
+
+# Дополнение от 13 июля 2025 
+#
+# Добавьте в ~/.bashrc для цветного вывода ls
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+# Включите цветной вывод для различных команд
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Цветной промпт с информацией о пути
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# Улучшенная история команд
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+# Автодополнение по истории с помощью стрелок
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+bind 'TAB:menu-complete'

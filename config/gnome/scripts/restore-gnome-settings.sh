@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")../../.." && pwd)"
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 GNOME_CONFIG_DIR="$REPO_DIR/config/gnome"
 
 echo "Восстановление GNOME настроек..."
